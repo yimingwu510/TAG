@@ -89,16 +89,6 @@ def length(seg):
             arra.append(i)
     return arra
 
-def qq(sentence):
-    arra=[]
-    if "qq" in sentence or "QQ" in sentence:
-        num = re.findall('\d+', sentence)
-        for i in num:
-            if len(i)>7 and len(i)<10:
-               # print("777",i)
-                arra.append(i)
-    return arra
-
 def filter(arra):
     result=[]
     for i in arra:
@@ -139,7 +129,7 @@ with open(r"E:\my papers\TAG\experiments\ttp_sentence_5_new.txt",'r',encoding = 
         ATT_result=ATT(dep,pos,seg,lines[sentence])
         sbv_result=sbv(dep, seg, lines[sentence])
         length_result=length(seg)
-        qq_result=qq(lines[sentence])
+      #  qq_result=qq(lines[sentence])
         wp_ttp = []
         wp_ttp = filter(ATT_result)
         vob_ttp=[]
@@ -150,8 +140,8 @@ with open(r"E:\my papers\TAG\experiments\ttp_sentence_5_new.txt",'r',encoding = 
         sbv_ttp = filter(sbv_result)
         length_ttp = []
         length_ttp = filter(length_result)
-        qq_ttp = []
-        qq_ttp = filter(qq_result)
+      #  qq_ttp = []
+       # qq_ttp = filter(qq_result)
         '''
         for i in vob_result:
             count=corpus.count(i)

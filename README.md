@@ -1,4 +1,6 @@
-this project contains three modules:
+#TAG
+
+This project contains three modules:
 1. preprocessing
 2. topic terms identification
 3. TTP entity recognition
@@ -69,7 +71,7 @@ The usages of each module are shown as below:
    
       a*word_sim(bw, word, model, 'cosine') +b/(levenshtein_distance(bw, word)+1) (a, b and threshold2 can be pre-defined by users)
 	  
-3. TTP Entity Recognition
+3. TTP entity recognition
 
 -- Sentence_filtering.py
    this file is used to divide sentences into sentences containing TTP terms and sentences not containing TTP terms.
